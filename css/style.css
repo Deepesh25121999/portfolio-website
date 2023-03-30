@@ -282,9 +282,39 @@ header.sticky{
     cursor: pointer;
 }
 .portfolio-content{
-    max-width: 300px;
-    height: auto;
+   display:grid;
+   grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+   align-items: center;
+   position: relative;
+   margin-top: 5rem;
+    }
+.row{
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.row img{
+    width: 50%;
+    border-radius: 8px;
+    display: block;
+    transition: transform 0.5s;
+    margin-left: 1rem;
+}
+.layer{
     width: 100%;
-    border-radius: 2px;
-    margin-top: auto;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,.1), #ff004f);
+    position: absolute;
+    border-radius: 8px;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 40px;
+    transition: height 0.5s;
+    flex-direction: column;
 }
